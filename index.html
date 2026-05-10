@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyNest • Echoes of Eternity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-zinc-50 text-zinc-800 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white/95 backdrop-blur-md border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl flex items-center justify-center text-3xl">🌟</div>
+                <span class="text-3xl font-bold tracking-tighter heading-font">JourneyNest</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#vision" class="nav-link">Vision</a>
+                <a href="#features" class="nav-link">Journeys</a>
+                <a href="#india" class="nav-link text-amber-600 font-semibold">Soul of India</a>
+                <a href="#demo" class="nav-link">Live Odyssey</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLoginModal()" 
+                        class="px-7 py-3 text-sm font-semibold border border-zinc-700 hover:border-amber-500 hover:text-amber-600 rounded-3xl transition">
+                    Log In
+                </button>
+                
+                <button onclick="toggleLoginModal()" 
+                        class="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-semibold rounded-3xl hover:scale-105 transition">
+                    Begin Your Eternal Journey
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-3xl mb-8">
+                <span class="text-amber-300">✦ Where Souls Find Their Path ✦</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6 heading-font">
+                Whispers of the<br>
+                <span class="text-amber-200">Untouched World</span>
+            </h1>
+            <p class="max-w-xl mx-auto text-xl text-white/90 mb-10">
+                Breathtaking journeys through hidden paradises. Every moment crafted like poetry, every sight an eternal memory.
+            </p>
+            <button onclick="document.getElementById('demo').scrollIntoView({ behavior: 'smooth' })"
+                    class="px-14 py-5 bg-white text-amber-950 font-semibold text-lg rounded-3xl hover:scale-105 transition">
+                Awaken Your Wanderlust
+            </button>
+        </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="px-5 py-2 bg-amber-100 text-amber-700 font-semibold rounded-3xl">OUR ESSENCE</span>
+                    <h2 class="text-5xl font-bold mt-6 leading-tight heading-font">
+                        Travel that feels like falling in love with the universe
+                    </h2>
+                </div>
+                <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-10">
+                    <h3 class="text-3xl font-semibold mb-8">The JourneyNest Promise</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-5"><span class="text-5xl">🌄</span><div><strong>Untamed Beauty</strong><p class="text-zinc-600">Secret wonders await you</p></div></li>
+                        <li class="flex gap-5"><span class="text-5xl">🪔</span><div><strong>Poetic Itineraries</strong><p class="text-zinc-600">Every day a masterpiece</p></div></li>
+                        <li class="flex gap-5"><span class="text-5xl">💛</span><div><strong>Soulful Budgets</strong><p class="text-zinc-600">Starting at just ₹1,35,000</p></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold heading-font">Where Dreams Become Reality</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="features-grid"></div>
+        </div>
+    </section>
+
+    <!-- INDIA SECTION -->
+    <section id="india" class="py-24 bg-zinc-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 tracking-widest">BHARAT • LAND OF LIVING LEGENDS</span>
+                <h2 class="text-5xl font-bold heading-font mt-4">Where Gods Walked &amp; Eternity Whispers</h2>
+            </div>
+
+            <div id="indiaSlideshow" class="india-slide h-[560px] rounded-3xl mb-12 shadow-2xl relative"
+                 style="background-image: url('https://i.pinimg.com/736x/fd/aa/75/fdaa75f0854b00753f0bd8a722676836.jpg');">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-10">
+                    <div class="flex gap-6">
+                        <img src="https://i.pinimg.com/1200x/fb/0d/c8/fb0dc8bdd54b58a0721a0ba796e7eb26.jpg" class="w-32 h-32 object-cover rounded-2xl shadow-xl" alt="Taj Mahal">
+                        <div>
+                            <h4 class="text-2xl font-semibold">Agra • Taj Mahal</h4>
+                            <p class="text-amber-300 italic">"A monument of immortal love, carved in moonlit marble dreams."</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <img src="https://i.pinimg.com/736x/7e/3e/c5/7e3ec59f77d38c2b5989a16bcbc98155.jpg" class="w-32 h-32 object-cover rounded-2xl shadow-xl" alt="Kedarnath">
+                        <div>
+                            <h4 class="text-2xl font-semibold">Kedarnath • Heaven in the Himalayas</h4>
+                            <p class="text-amber-300 italic">"Where the Himalayas whisper prayers to Lord Shiva"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-10">
+                    <div class="flex gap-6">
+                        <img src="https://i.pinimg.com/1200x/cd/f1/85/cdf185f694b0c5bb79a0a36781d37b5d.jpg" class="w-32 h-32 object-cover rounded-2xl shadow-xl" alt="Kashmir">
+                        <div>
+                            <h4 class="text-2xl font-semibold">Kashmir • Paradise on Earth</h4>
+                            <p class="text-amber-300 italic">"Paradise woven with snow, saffron, and timeless poetry."</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <img src="https://i.pinimg.com/736x/0f/79/85/0f79859e8a8385448d8d2019ea7695d2.jpg" class="w-32 h-32 object-cover rounded-2xl shadow-xl" alt="Meghalaya">
+                        <div>
+                            <h4 class="text-2xl font-semibold">Meghalaya • Emerald Rainfall Retreat</h4>
+                            <p class="text-amber-300 italic">"Land of clouds where rain sings through living roots and emerald hills."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <p class="text-center text-amber-400 mb-6 text-lg">✦ Experience the Divine Soul of India ✦</p>
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-amber-900/30">
+                    <video width="100%" height="380" controls autoplay loop muted preload="metadata"
+                           poster="https://i.pinimg.com/736x/fd/aa/75/fdaa75f0854b00753f0bd8a722676836.jpg"
+                           class="w-full bg-black">
+                        <source src="https://www.pexels.com/download/video/18560009/" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE DEMO -->
+    <section id="demo" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-zinc-900 text-white rounded-3xl overflow-hidden shadow-2xl">
+                <div class="p-6 border-b border-zinc-800 flex justify-between items-center">
+                    <div class="font-mono opacity-70">journeynest.com/journey/eternal-india-2025</div>
+                    <button onclick="toggleTripModal()" class="bg-amber-400 text-zinc-900 px-6 py-2 rounded-2xl font-semibold">Add Sacred Stop</button>
+                </div>
+                <div class="p-10">
+                    <div class="flex justify-between items-end mb-10">
+                        <div>
+                            <h3 class="text-4xl font-bold">Rajasthan → Himalayas → Kerala</h3>
+                            <p class="text-amber-400">14 Days • November 2025</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm opacity-70">Enchanted Budget</div>
+                            <div class="text-5xl font-bold text-emerald-400">₹1,35,000</div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="day-card bg-zinc-800 p-6 rounded-3xl flex gap-6 items-center hover:bg-amber-900/30 transition">
+                            <img src="https://i.pinimg.com/736x/26/6c/df/266cdfe9a3488761ff4ad5def9a12499.jpg" class="w-20 h-20 object-cover rounded-2xl">
+                            <div class="flex-1">
+                                <span class="font-semibold text-xl">Days 1-5 • Rajasthan</span>
+                                <p class="text-amber-300">Golden palaces &amp; desert sunsets</p>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-400 px-4 py-1 rounded-xl">₹47k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOCKUPS -->
+    <section id="mockup" class="py-24 bg-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold heading-font text-center mb-12">Portals to Paradise</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/d4/37/84/d43784f4e0788ff1583170674514a8ec.jpg" class="w-full h-96 object-cover">
+                    <div class="p-6"><h4 class="font-semibold">Soulful Itineraries</h4></div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://i.pinimg.com/736x/82/16/7c/82167c9bd2d74fec5fab08478f61ef4c.jpg" class="w-full h-96 object-cover">
+                    <div class="p-6"><h4 class="font-semibold">Gentle Budgeting</h4></div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://i.pinimg.com/1200x/b4/65/2c/b4652c99435c1418aedd9d3f4395ceb5.jpg" class="w-full h-96 object-cover">
+                    <div class="p-6"><h4 class="font-semibold">Hidden Sanctuaries</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-28 bg-gradient-to-br from-amber-500 via-yellow-500 to-orange-500 text-zinc-900">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-6xl font-bold heading-font mb-6">The World Is Calling Your Name</h2>
+            <button onclick="toggleLoginModal()" class="px-16 py-7 bg-zinc-900 text-white text-2xl font-semibold rounded-3xl hover:scale-110 transition">
+                Begin Your Sacred Voyage →
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-4xl heading-font">JourneyNest</span>
+            <p class="mt-4 text-zinc-400">Crafting poetry through travel • 2026</p>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
+        <div class="bg-white rounded-3xl max-w-md w-full mx-4 p-10 text-center">
+            <h3 class="text-3xl font-bold heading-font mb-8">Welcome Back, Wanderer</h3>
+            <button onclick="fakeLogin()" class="w-full py-5 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-semibold rounded-3xl">
+                Continue Your Journey
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
